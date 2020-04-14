@@ -1,5 +1,5 @@
 ---
-title: Countly, is my new journey!
+title: Countly, Is My New Journey!
 date: '2019-07-01'
 spoiler: I'm starting my next job.
 cta: general
