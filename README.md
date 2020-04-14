@@ -1,8 +1,6 @@
-# [overreacted.io](https://overreacted.io/)
+# [mksg.lu](https://mksg.lu)
 
-My personal blog. Forked from [Gatsby blog starter](https://github.com/gatsbyjs/gatsby-starter-blog). Syntax theme based on [Sarah Drasner's Night Owl](https://github.com/sdras/night-owl-vscode-theme/) with small tweaks.
-
-To run locally, `yarn`, then `yarn dev`, then open https://localhost:8000.
+My personal blog. Forked from [Overreacted](https://github.com/gaearon/overreacted.io). Syntax theme based on [Sarah Drasner's Night Owl](https://github.com/sdras/night-owl-vscode-theme/) with small tweaks.
 
 ## Contributing Translations
 
