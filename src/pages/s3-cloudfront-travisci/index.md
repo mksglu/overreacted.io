@@ -13,7 +13,7 @@ TravisCI is free only in open source projects. It is an easy to use and highly p
 Now, as a first step, we should create a bucket in S3 service and edit its policy to make it public.
 You can add this code using the editor. Be sure to change the example-bucket field to your bucket name.
 
-```jsxon
+```json
 {
   "Version":"2012-10-17",
   "Statement":[
