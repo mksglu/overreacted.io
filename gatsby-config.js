@@ -190,5 +190,58 @@ module.exports = {
       },
     },
     `gatsby-plugin-catch-links`,
+    {
+      resolve: `gatsby-plugin-sitemap`,
+      options: {
+        query: `{
+          site {
+            siteMetadata {
+              siteUrl
+            }
+          }
+          allSitePage {
+            edges {
+              node {
+                path
+              }
+            }
+          }
+          allMarkdownRemark {
+            edges {
+              node {
+                fields {
+                  slug
+                }
+              }
+            }
+          }
+        }`,
+        serialize: ({ site, allSitePage, allMarkdownRemark }) => {
+          let pages = [
+            {
+              url: site.siteMetadata.siteUrl,
+              changefreq: 'daily',
+              priority: 1,
+            },
+          ];
+          // allSitePage.edges.map(edge => {
+          //   pages.push({
+          //     url: site.siteMetadata.siteUrl + edge.node.path,
+          //     changefreq: `daily`,
+          //     priority: 0.7,
+          //   })
+          // })
+          allMarkdownRemark.edges.map(edge => {
+            pages.push({
+              url: `${site.siteMetadata.siteUrl}${edge.node.fields.slug}`,
+              changefreq: `daily`,
+              priority: 0.7,
+            });
+          });
+
+          return pages;
+        },
+      },
+    },
   ],
 };
