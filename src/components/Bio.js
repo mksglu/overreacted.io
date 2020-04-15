@@ -1,5 +1,6 @@
 import React from 'react';
 import profilePic from '../assets/profile-pic.png';
+import BeerMugs from '../assets/beer-mugs.svg';
 import { rhythm } from '../utils/typography';
 
 class Bio extends React.Component {
@@ -22,10 +23,22 @@ class Bio extends React.Component {
             borderRadius: '50%',
           }}
         />
-        <p style={{ maxWidth: 310 }}>
-          Personal blog by{' '}
-          <a href="https://twitter.com/mksglu">Mert Koseoglu</a>. I&nbsp;explain
-          with words and code.
+        <p style={{ display: 'flex', flexDirection: 'column', maxWidth: 310 }}>
+          <span>
+            Personal blog by{' '}
+            <a href="https://twitter.com/mksglu">Mert Koseoglu</a>
+          </span>
+          <span style={{ display: 'flex' }}>
+            <span style={{}}>[object Object]</span>
+            <img
+              src={BeerMugs}
+              style={{
+                height: rhythm(0.7),
+                width: rhythm(1.1),
+                marginTop: rhythm(0.2),
+              }}
+            ></img>
+          </span>
         </p>
       </div>
     );
