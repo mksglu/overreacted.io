@@ -35,7 +35,7 @@ class Bio extends React.Component {
               style={{
                 height: rhythm(0.7),
                 width: rhythm(1.1),
-                marginTop: rhythm(0.2),
+                marginTop: rhythm(0.15),
               }}
             ></img>
           </span>
