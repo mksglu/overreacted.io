@@ -2,7 +2,6 @@ import React from 'react';
 import profilePic from '../assets/profile-pic.png';
 import BeerMugs from '../assets/beer-mugs.svg';
 import { rhythm } from '../utils/typography';
-
 class Bio extends React.Component {
   render() {
     return (
@@ -26,7 +25,9 @@ class Bio extends React.Component {
         <p style={{ display: 'flex', flexDirection: 'column', maxWidth: 310 }}>
           <span>
             Personal blog by{' '}
-            <a href="https://twitter.com/mksglu">Mert Koseoglu</a>
+            <a rel="noopener noreferrer" href="https://twitter.com/mksglu">
+              Mert Koseoglu
+            </a>
           </span>
           <span style={{ display: 'flex' }}>
             <span style={{}}>[object Object]</span>
