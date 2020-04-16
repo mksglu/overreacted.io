@@ -19,7 +19,8 @@ const query = graphql`
   }
 `;
 
-function SEO({ meta, image, title, description, slug, lang = 'en' }) {
+function SEO({ meta, image, title, description, slug, lang = 'en', notFound }) {
+  console.log('SLUG', notFound);
   return (
     <StaticQuery
       query={query}
@@ -36,6 +37,8 @@ function SEO({ meta, image, title, description, slug, lang = 'en' }) {
                   titleTemplate: `%s — ${siteMetadata.title}`,
                   title,
                 }
+              : notFound
+              ? { title: '404' }
               : {
                   title: `${siteMetadata.title}`,
                 })}
@@ -86,6 +89,9 @@ function SEO({ meta, image, title, description, slug, lang = 'en' }) {
                       },
                     ]
                   : []
+              )
+              .concat(
+                notFound ? [{ property: 'robots', content: 'noindex' }] : []
               )
               .concat(meta)}
           />
