@@ -2,18 +2,23 @@
   "name": "mksglu",
   "private": true,
   "description": "Mert Koseoglu",
-  "version": "1.0.0",
+  "version": 2,
   "author": "Mert Koseoglu <me@mksg.lu>",
   "bugs": {
     "url": "https://github.com/mksglu/mksg.lu/issues"
   },
   "builds": [
-    { "src": "./package.json", "use": "@now/static-build", "config": {"distDir": "public"} }
+    {
+      "src": "package.json",
+      "use": "@now/static-build",
+      "config": {
+        "distDir": "public"
+      }
+    }
   ],
   "routes": [
-    { "src": "/(?<path>.*)", "dest": "/$path", "continue": true },
-    { "handle": "filesystem" },
-    { "src": "/.*", "dest": "/404" }
+    {"handle": "filesystem"},
+    {"src": "/.*", "status": 404, "dest": "404"}
   ],
   "dependencies": {
     "gatsby": "^2.0.76",
