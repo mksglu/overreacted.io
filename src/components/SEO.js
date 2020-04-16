@@ -20,7 +20,6 @@ const query = graphql`
 `;
 
 function SEO({ meta, image, title, description, slug, lang = 'en', notFound }) {
-  console.log('SLUG', notFound);
   return (
     <StaticQuery
       query={query}
