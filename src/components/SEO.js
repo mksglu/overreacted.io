@@ -20,16 +20,28 @@ const query = graphql`
   }
 `;
 
-function SEO({ meta, image, title, description, slug, lang = 'en', notFound }) {
+function SEO({
+  meta,
+  image,
+  title,
+  description,
+  slug,
+  lang = 'en',
+  notFound,
+  keywords,
+}) {
   return (
     <StaticQuery
       query={query}
       render={data => {
+        const mapKeywords = keywords =>
+          keywords.map(keyword => keyword).join(', ');
         const { siteMetadata } = data.site;
         const metaDescription = description || siteMetadata.description;
-        const keywords = siteMetadata.keywords
-          .map(keyword => keyword)
-          .join(', ');
+        const metaKeywords = keywords
+          ? mapKeywords(keywords)
+          : mapKeywords(siteMetadata.keywords);
+        console.log(metaKeywords);
         const metaImage = image ? `${siteMetadata.siteUrl}/${image}` : null;
         const url = `${siteMetadata.siteUrl}${slug}`;
         return (
@@ -52,7 +64,7 @@ function SEO({ meta, image, title, description, slug, lang = 'en', notFound }) {
               },
               {
                 name: 'keywords',
-                content: keywords,
+                content: metaKeywords,
               },
               {
                 property: 'og:url',

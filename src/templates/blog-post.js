@@ -94,6 +94,7 @@ class Translations extends React.Component {
 class BlogPostTemplate extends React.Component {
   render() {
     const post = this.props.data.markdownRemark;
+    console.log(post, 'sdsds');
     const siteTitle = get(this.props, 'data.site.siteMetadata.title');
     let {
       previous,
@@ -146,6 +147,7 @@ class BlogPostTemplate extends React.Component {
           title={post.frontmatter.title}
           description={post.frontmatter.spoiler}
           slug={post.fields.slug}
+          keywords={post.frontmatter.keywords}
         />
         <main>
           <article>
@@ -269,6 +271,7 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         spoiler
         cta
+        keywords
       }
       fields {
         slug

@@ -73,7 +73,7 @@ exports.createPages = ({ graphql, actions }) => {
           reject(result.errors);
           return;
         }
-        console.log('SDFSDFDS', result);
+        // console.log('SDFSDFDS', result);
         // Create blog posts pages.
         const posts = result.data.allMarkdownRemark.edges;
         const allSlugs = _.reduce(

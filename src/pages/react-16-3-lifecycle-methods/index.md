@@ -3,6 +3,7 @@ title: React 16.3 Lifecycle Methods
 date: '2018-08-01'
 spoiler: The React team was working asynchronous rendering for about a year, and as you know, React 16.3 was released each month.
 cta: react
+keywords: ["react"]
 ---
 
 The React team was working asynchronous rendering for about a year, and as you know, React 16.3 was released each month. This version recommended that some life methods be used with prefix UNSAFE.
