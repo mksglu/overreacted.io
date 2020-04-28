@@ -4,6 +4,7 @@ module.exports = {
     author: 'Mert Koseoglu',
     description: 'Personal blog by Mert Koseoglu.',
     siteUrl: 'https://mksg.lu',
+    keywords: ['Mert Koseoglu', 'Mert Köseoğlu'],
     social: {
       twitter: '@mksglu',
     },
@@ -165,8 +166,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Mert Köseoğlu`,
-        short_name: `Mert Köseoğlu`,
+        name: `Mert Koseoglu`,
+        short_name: `Mert Koseoglu`,
         start_url: `/`,
         background_color: `#ffffff`,
         theme_color: `#ffa7c4`,

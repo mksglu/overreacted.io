@@ -11,6 +11,7 @@ const query = graphql`
         author
         description
         siteUrl
+        keywords
         social {
           twitter
         }
@@ -26,6 +27,9 @@ function SEO({ meta, image, title, description, slug, lang = 'en', notFound }) {
       render={data => {
         const { siteMetadata } = data.site;
         const metaDescription = description || siteMetadata.description;
+        const keywords = siteMetadata.keywords
+          .map(keyword => keyword)
+          .join(', ');
         const metaImage = image ? `${siteMetadata.siteUrl}/${image}` : null;
         const url = `${siteMetadata.siteUrl}${slug}`;
         return (
@@ -45,6 +49,10 @@ function SEO({ meta, image, title, description, slug, lang = 'en', notFound }) {
               {
                 name: 'description',
                 content: metaDescription,
+              },
+              {
+                name: 'keywords',
+                content: keywords,
               },
               {
                 property: 'og:url',
