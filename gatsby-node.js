@@ -8,12 +8,12 @@ exports.createPages = ({ graphql, actions }) => {
   const { createPage, createRedirect } = actions;
 
   // Oops
-  // createRedirect({
-  //   fromPath: '/zh_TW/things-i-dont-know-as-of-2018/',
-  //   toPath: '/zh-hant/things-i-dont-know-as-of-2018/',
-  //   isPermanent: true,
-  //   redirectInBrowser: true,
-  // });
+  createRedirect({
+    fromPath: '/resume',
+    toPath: '/resume.pdf',
+    isPermanent: true,
+    redirectInBrowser: true,
+  });
   // // Oops 2
   // createRedirect({
   //   fromPath: '/not-everything-should-be-a-hook/',
