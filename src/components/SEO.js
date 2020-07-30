@@ -48,10 +48,12 @@ function SEO({
           <Helmet
             htmlAttributes={{ lang }}
             {...(title
-              ? {
-                  titleTemplate: `%s — ${siteMetadata.title}`,
-                  title,
-                }
+              ? title === 'Mert Koseoglu Resume'
+                ? { titleTemplate: `%s`, title }
+                : {
+                    titleTemplate: `%s — ${siteMetadata.title}`,
+                    title,
+                  }
               : notFound
               ? { title: '404' }
               : {
