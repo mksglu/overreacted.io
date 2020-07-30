@@ -13,6 +13,7 @@ class Resume extends React.Component {
           keywords={['Mert Koseoglu Resume']}
         />
         <iframe
+          frameBorder="0"
           style={{ height: '100vh', width: '100vw', margin: '0' }}
           src={ResumePDF}
         />
