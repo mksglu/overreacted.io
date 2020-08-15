@@ -2,7 +2,7 @@
 title: CI/CD S3 and CloudFront with TravisCI
 date: '2019-01-01'
 spoiler: We'll learn how to deployment when build React app used to S3 and CloudFront with TravisCI.
-cta: general
+cta: react
 keywords: ["cloudfront","travisci","aws s3"]
 ---
 We'll learn how to deployment when build React app used to S3 and CloudFront with TravisCI.
