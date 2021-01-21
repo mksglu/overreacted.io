@@ -31,7 +31,14 @@ class Footer extends React.Component {
         >
           github
         </a>{' '}
-        &bull; <a href="https://mksg.lu/resume">resume</a>
+        &bull;{' '}
+        <a
+          href="https://www.linkedin.com/in/mksglu/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          resume
+        </a>
       </footer>
     );
   }
